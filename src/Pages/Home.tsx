@@ -6,15 +6,44 @@ const Home: React.FC = () => {
   return (
     <section
       className="
-        relative
         h-screen w-screen
-        bg-cover bg-center bg-no-repeat
-        text-white
-      "
+        bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${bgHome})` }}
     >
       {/* Navbar peste imagine */}
       <Navbar />
+      <div className="flex justify-between items-end mt-[251px] px-[165px]">
+        {/* Stânga — text */}
+        <div className="flex flex-col w-[31vw] h-[42vh]">
+          <p>SO, YOU WANT TO TRAVEL TO</p>
+          <h1>SPACE</h1>
+          <p>
+            Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </p>
+        </div>
+
+        {/* Dreapta — cercul Explore */}
+        <button
+          className="top-[55vh] left-[69.5vw]
+    w-[19vw] h-[19vw]
+    flex items-center justify-center
+    rounded-full
+    !bg-white text-black
+    text-[1.2vw] tracking-[2px] overflow-hidden transition-all duration-300 hover:shadow-[0_0_0_88px_rgba(255,255,255,0.1)]"
+        >
+          <span
+            className="w-[148px] h-[37px]
+    font-['Bellefair'] font-normal text-[32px]
+    leading-[100%] tracking-[2px]
+    !text-black"
+          >
+            EXPLORE
+          </span>
+        </button>
+      </div>
     </section>
   );
 };
