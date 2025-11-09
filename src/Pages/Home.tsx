@@ -14,7 +14,7 @@ const Home: React.FC = () => {
       <Navbar />
       <div className="flex justify-between items-end mt-[251px] px-[165px]">
         {/* Stânga — text */}
-        <div className="flex flex-col w-[31vw] h-[42vh] space-y-[24px] relative translate-y-[-50px]">
+        <div className="flex flex-col w-[31vw] h-[42vh] space-y-[24px] translate-y-[-50px]">
           <p
             className="w-full h-[34px] 
          font-barlowCondensed font-normal 
