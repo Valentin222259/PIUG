@@ -1,17 +1,15 @@
 import React from "react";
 import logo from "../assets/shared/logo.svg";
-import line from "../assets/Others/Rectangle.png";
 
 const Navbar: React.FC = () => {
   return (
     <header
       className="
-    fixed top-[4vh] left-[3vw] right-[0] relative
-    flex items-center justify-between
-    text-white"
+    top-[4vh] left-[3vw] right-[0] relative
+    flex items-center justify-between"
     >
       {/* Container pentru logo + linie */}
-      <div className="relative flex items-center gap-[48px]">
+      <div className="flex items-center gap-[48px]">
         <img
           src={logo}
           alt="Logo"
@@ -30,7 +28,6 @@ const Navbar: React.FC = () => {
       {/* Navbar */}
       <nav
         className="
-      relative z-20
       w-[57.6vw] h-[10.6vh]
       bg-white/5 backdrop-blur-[80px]
       flex items-center justify-start gap-[64px]
