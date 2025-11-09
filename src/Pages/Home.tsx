@@ -14,9 +14,9 @@ const Home: React.FC = () => {
       <Navbar />
       <div className="flex justify-between items-end mt-[251px] px-[165px]">
         {/* Stânga — text */}
-        <div className="flex flex-col w-[31vw] h-[42vh] space-y-[20px]">
+        <div className="flex flex-col w-[31vw] h-[42vh] space-y-[24px] relative translate-y-[-50px]">
           <p
-            className="m-0 w-full h-[34px] 
+            className="w-full h-[34px] 
          font-barlowCondensed font-normal 
          text-[28px] leading-[100%]
          text-[#D0D6F9]"
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
             SO, YOU WANT TO TRAVEL TO
           </p>
           <h1
-            className="m-0 w-full h-[172px]
+            className="w-full h-[172px]
          font-bellefair font-normal
          text-[150px] leading-[100%] 
          text-[#D0D6F9]"
@@ -32,7 +32,7 @@ const Home: React.FC = () => {
             SPACE
           </h1>
           <p
-            className="m-0 w-full h-[128px]
+            className="w-full h-[128px]
          font-barlow font-normal
          text-[18px] leading-[32px]
          text-[#D0D6F9]"
