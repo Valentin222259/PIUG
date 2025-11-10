@@ -21,11 +21,10 @@ const Crew: React.FC = () => {
 
   return (
     <section
-      className="h-screen w-screen bg-cover bg-center bg-no-repeat text-white overflow-hidden"
+      className="relative h-screen w-screen bg-cover bg-center bg-no-repeat text-white overflow-hidden"
       style={{ backgroundImage: `url(${bgCrew})` }}
     >
       <Navbar />
-
       {/* Titlu principal */}
       <div
         className="
@@ -39,13 +38,12 @@ const Crew: React.FC = () => {
           Meet your crew
         </h2>
       </div>
-
       {/* Conținut principal */}
       <div className="flex justify-between items-start w-[80vw] ml-[12vw] mt-[14.26vh]">
         {/* Stânga — text */}
         <div className="w-[30vw] flex flex-col -translate-x-[2.5vw] -translate-y-[5vh] text-white">
           {/* Role + Name */}
-          <div className="flex flex-col gap-[3vh]">
+          <div className="flex flex-col gap-[4vh]">
             <h3 className="opacity-50 font-['Bellefair'] font-normal text-[2.22vw] leading-[100%] uppercase">
               {selected.role}
             </h3>
@@ -55,22 +53,9 @@ const Crew: React.FC = () => {
           </div>
 
           {/* Bio */}
-          <p className="mt-[3vh] font-['Barlow'] font-normal text-[1.25vw] leading-[177%] w-[30.8vw]">
+          <p className="mt-[5vh] font-['Barlow'] font-normal text-[1.25vw] leading-[177%] w-[30.8vw]">
             {selected.bio}
           </p>
-          <div className="flex gap-[1vw] mt-[4vh]">
-            {crewMembers.map((member, index) => (
-              <button
-                key={index}
-                onClick={() => setSelected(member)}
-                className={`w-[1vw] h-[1vw] rounded-full transition-all duration-300 ${
-                  selected.name === member.name
-                    ? "bg-white"
-                    : "bg-[#979797] opacity-30 hover:opacity-70"
-                }`}
-              ></button>
-            ))}
-          </div>
         </div>
 
         {/* Dreapta — imagine membru echipaj */}
@@ -81,6 +66,20 @@ const Crew: React.FC = () => {
             className="w-[28vw] h-auto object-contain"
           />
         </div>
+      </div>{" "}
+      {/* containerul principal cu flex justify-between */}
+      <div className="absolute left-[9.7vw] bottom-[9vh] flex gap-[1vw]">
+        {crewMembers.map((member, index) => (
+          <button
+            key={index}
+            onClick={() => setSelected(member)}
+            className={`w-[1vw] h-[1vw] rounded-full transition-all duration-300 ${
+              selected.name === member.name
+                ? "bg-white"
+                : "bg-[#979797] opacity-30 hover:opacity-70"
+            }`}
+          ></button>
+        ))}
       </div>
     </section>
   );
