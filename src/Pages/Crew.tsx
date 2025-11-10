@@ -57,16 +57,13 @@ const Crew: React.FC = () => {
             {selected.bio}
           </p>
         </div>
-
-        {/* Dreapta — imagine membru echipaj */}
-        <div className="flex justify-end w-[40%]">
-          <img
-            src={selected.image}
-            alt={selected.name}
-            className="w-[28vw] h-auto object-contain"
-          />
-        </div>
       </div>{" "}
+      {/* Dreapta — imagine membru echipaj */}
+      <img
+        src={selected.image}
+        alt={selected.name}
+        className="absolute w-[39.5vw] h-[79.1vh] top-[22vh] left-[51vw] object-contain"
+      />
       {/* containerul principal cu flex justify-between */}
       <div className="absolute left-[9.7vw] bottom-[9vh] flex gap-[1vw]">
         {crewMembers.map((member, index) => (
