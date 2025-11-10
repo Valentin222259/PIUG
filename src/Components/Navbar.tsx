@@ -1,7 +1,16 @@
 import React from "react";
 import logo from "../assets/shared/logo.svg";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar: React.FC = () => {
+  const location = useLocation();
+
+  const linkClass = (path: string) =>
+    `font-['Barlow_Condensed'] text-[16px] tracking-[2.7px] uppercase flex items-center gap-[8px] ${
+      location.pathname === path
+        ? "border-b-[3px] border-white text-white"
+        : "opacity-80 hover:opacity-100 text-white border-b-[3px] border-transparent hover:border-gray-400"
+    }`;
   return (
     <header
       className="
@@ -33,34 +42,18 @@ const Navbar: React.FC = () => {
       flex items-center justify-start gap-[64px]
       mr-auto pl-[15vh]"
       >
-        <a
-          href="#"
-          className="font-['Barlow_Condensed'] text-[16px] tracking-[2.7px] text-white uppercase flex items-center gap-[8px] border-b-[3px] border-white"
-        >
-          <span className="font-bold">00</span>
-          <span className="font-normal">Home</span>
-        </a>
-        <a
-          href="#"
-          className="font-['Barlow_Condensed'] text-[16px] tracking-[2.7px] text-white uppercase flex items-center gap-[8px] opacity-80 hover:opacity-100"
-        >
-          <span className="font-bold">01</span>
-          <span className="font-normal">Destination</span>
-        </a>
-        <a
-          href="#"
-          className="font-['Barlow_Condensed'] text-[16px] tracking-[2.7px] text-white uppercase flex items-center gap-[8px] opacity-80 hover:opacity-100"
-        >
-          <span className="font-bold">02</span>
-          <span className="font-normal">Crew</span>
-        </a>
-        <a
-          href="#"
-          className="font-['Barlow_Condensed'] text-[16px] tracking-[2.7px] text-white uppercase flex items-center gap-[8px] opacity-80 hover:opacity-100"
-        >
-          <span className="font-bold">03</span>
-          <span className="font-normal">Technology</span>
-        </a>
+        <Link to="/" className={linkClass("/")}>
+          <span className="font-bold">00</span> Home
+        </Link>
+        <Link to="/destination" className={linkClass("/destination")}>
+          <span className="font-bold">01</span> Destination
+        </Link>
+        <Link to="/crew" className={linkClass("/crew")}>
+          <span className="font-bold">02</span> Crew
+        </Link>
+        <Link to="/technology" className={linkClass("/technology")}>
+          <span className="font-bold">03</span> Technology
+        </Link>
       </nav>
     </header>
   );
