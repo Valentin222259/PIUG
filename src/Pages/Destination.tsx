@@ -45,7 +45,7 @@ const Destination: React.FC = () => {
         </h2>
       </div>
 
-      <div className="flex justify-between items-center w-[80vw] ml-[12vw] mt-[6vh]">
+      <div className="flex justify-between items-start w-[80vw] ml-[12vw] mt-[8vh]">
         <img
           src={selected.image}
           alt={selected.name}
