@@ -27,33 +27,37 @@ const Crew: React.FC = () => {
       <Navbar />
 
       {/* Titlu principal */}
-      <div className="w-[30vw] h-[3.15vh] mt-[14vh] ml-[9vw] flex items-center gap-[1.8vw]">
-        <span className="opacity-25 font-['Barlow_Condensed'] font-bold text-[1.46vw] leading-[100%] tracking-[0.25vw]">
+      <div
+        className="
+           w-[30.9vw] h-[3.15vh] mt-[14.63vh] ml-[9.67vw] flex items-center gap-[1.8vw]"
+      >
+        <span className="opacity-25 font-['Barlow_Condensed'] font-bold text-[1.46vw] leading-[100%] tracking-[0.25vw] text-white">
           02
         </span>
-        <h2 className="font-['Barlow_Condensed'] font-normal text-[1.46vw] leading-[100%] tracking-[0.25vw] uppercase">
+
+        <h2 className="font-['Barlow_Condensed'] font-normal text-[1.46vw] leading-[100%] tracking-[0.25vw] uppercase text-white">
           Meet your crew
         </h2>
       </div>
 
       {/* Conținut principal */}
-      <div className="flex justify-between items-end w-[80vw] mx-auto mt-[10vh]">
+      <div className="flex justify-between items-start w-[80vw] ml-[12vw] mt-[14.26vh]">
         {/* Stânga — text */}
-        <div className="flex flex-col justify-between gap-[2vh] w-[40%] translate-y-[-4vh]">
-          <div>
-            <h3 className="font-['Bellefair'] text-[1.5vw] text-[#8e8f95] uppercase mb-[1vh]">
+        <div className="w-[30vw] flex flex-col -translate-x-[2.5vw] -translate-y-[5vh] text-white">
+          {/* Role + Name */}
+          <div className="flex flex-col gap-[3vh]">
+            <h3 className="opacity-50 font-['Bellefair'] font-normal text-[2.22vw] leading-[100%] uppercase">
               {selected.role}
             </h3>
-            <h1 className="font-['Bellefair'] text-[3.5vw] uppercase leading-[120%]">
+            <h1 className="font-['Bellefair'] font-normal text-[3.9vw] leading-[100%] uppercase text-nowrap">
               {selected.name}
             </h1>
           </div>
 
-          <p className="font-['Barlow'] text-[1vw] leading-[180%] text-[#D0D6F9] w-[80%]">
+          {/* Bio */}
+          <p className="mt-[3vh] font-['Barlow'] font-normal text-[1.25vw] leading-[177%] w-[30.8vw]">
             {selected.bio}
           </p>
-
-          {/* Butoane pentru crew */}
           <div className="flex gap-[1vw] mt-[4vh]">
             {crewMembers.map((member, index) => (
               <button
