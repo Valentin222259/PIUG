@@ -1,8 +1,11 @@
 import React from "react";
 import bgHome from "../assets/home/background-home-desktop.jpg";
 import Navbar from "../Components/Navbar";
+import { useNavigate } from "react-router-dom";
 
 const Home: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <section
       className="
@@ -46,6 +49,7 @@ const Home: React.FC = () => {
 
         {/* Dreapta — cercul Explore */}
         <button
+          onClick={() => navigate("/destination")}
           className="top-[55vh] left-[69.5vw]
     w-[18vw] h-[18vw]
     flex items-center justify-center

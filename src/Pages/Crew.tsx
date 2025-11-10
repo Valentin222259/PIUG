@@ -62,7 +62,7 @@ const Crew: React.FC = () => {
       <img
         src={selected.image}
         alt={selected.name}
-        className="absolute w-[39.5vw] h-[79.1vh] top-[22vh] left-[51vw] object-contain"
+        className="absolute w-[39.5vw] h-[79.1vh] top-[20vh] left-[56vw] object-contain"
       />
       {/* containerul principal cu flex justify-between */}
       <div className="absolute left-[9.7vw] bottom-[9vh] flex gap-[1vw]">
