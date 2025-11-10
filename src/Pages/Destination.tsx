@@ -25,7 +25,7 @@ const Destination: React.FC = () => {
       <div
         className="
            w-[30.9vw] h-[3.15vh]
-          mt-[16.63vh] ml-[9.67vw]
+          mt-[14.63vh] ml-[9.67vw]
           flex items-center gap-[1.8vw]
         "
       >
@@ -45,14 +45,14 @@ const Destination: React.FC = () => {
         </h2>
       </div>
 
-      <div className="flex justify-between items-center w-[80vw] ml-[12vw] mt-[8vh]">
+      <div className="flex justify-between items-center w-[80vw] ml-[12vw] mt-[6vh]">
         <img
           src={moonImg}
           alt={selected.name}
           className="w-[26vw] h-[26vw] object-contain"
         />
 
-        <div className="w-[30vw] h-auto flex flex-col justify-between -translate-x-[2vw] -translate-y-[1.5vh]">
+        <div className="w-[30vw] h-auto flex flex-col justify-between -translate-x-[4vw] -translate-y-[5vh] gap-[1.5vw]">
           {/* Tabs */}
           <div className="flex gap-[2vw] mb-[2vh]">
             {destinations.map((item, index) => (
