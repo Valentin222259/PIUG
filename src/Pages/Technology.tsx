@@ -33,11 +33,11 @@ const Technology: React.FC = () => {
           Space launch 101
         </h2>
       </div>
-      <div className="flex justify-between items-center w-[80vw] ml-[10vw] mt-[10vh]">
+      <div className="flex justify-between items-start w-[80vw] ml-[10vw] mt-[10vh]">
         {/* Stânga - butoane + text */}
         <div className="flex gap-[4vw] items-center">
           {/* Butoanele circulare */}
-          <div className="flex flex-col gap-[2vh]">
+          <div className="flex flex-col gap-[5vh]">
             {techItems.map((item, index) => (
               <button
                 key={index}
