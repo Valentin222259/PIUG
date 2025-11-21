@@ -8,6 +8,7 @@ import Contact from "./Pages/Contact";
 import Video from "./Pages/Video";
 import Footer from "./Components/Footer";
 import HelpButton from "./Components/HelpButton";
+import ScrollButton from "./Components/ScrollButton";
 
 const App: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const App: React.FC = () => {
       </Routes>
       <Footer />
       <HelpButton />
+      <ScrollButton />
     </div>
   );
 };
