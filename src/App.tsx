@@ -7,6 +7,7 @@ import Technology from "./Pages/Technology";
 import Contact from "./Pages/Contact";
 import Video from "./Pages/Video";
 import Footer from "./Components/Footer";
+import HelpButton from "./Components/HelpButton";
 
 const App: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const App: React.FC = () => {
         <Route path="/video" element={<Video />} />
       </Routes>
       <Footer />
+      <HelpButton />
     </div>
   );
 };
