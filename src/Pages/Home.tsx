@@ -9,7 +9,7 @@ const Home: React.FC = () => {
   return (
     <section
       className="
-        h-screen w-screen
+        min-h-screen w-screen
         bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${bgHome})` }}
     >

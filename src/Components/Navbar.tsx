@@ -121,6 +121,9 @@ const Navbar: React.FC = () => {
         <Link to="/contact" className={linkClass("/contact")}>
           <span className="font-bold">04</span> Contact
         </Link>
+        <Link to="/video" className={linkClass("/video")}>
+          <span className="font-bold">05</span> Video
+        </Link>
       </nav>
     </header>
   );
