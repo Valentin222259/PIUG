@@ -76,10 +76,9 @@ const Navbar: React.FC = () => {
           alt="Logo"
           className="w-[48px] h-[48px] opacity-100 z-50"
         />
-        <hr className="w-[15vw] border-t border-white opacity-25 z-10" />
       </div>
 
-      <nav className="w-[75.7vw] h-[10.6vh] bg-white/5 backdrop-blur-[80px] flex items-center justify-start gap-[64px] mr-auto pl-[3vw] relative">
+      <nav className="w-[90%] h-[10.6vh] bg-white/5 backdrop-blur-[80px] flex items-center justify-start gap-[64px] mr-auto pl-[3vw] left-[4vw] relative">
         {/* SEARCH BAR */}
         <div className="relative">
           <input
@@ -118,6 +117,9 @@ const Navbar: React.FC = () => {
         </Link>
         <Link to="/technology" className={linkClass("/technology")}>
           <span className="font-bold">03</span> Technology
+        </Link>
+        <Link to="/contact" className={linkClass("/contact")}>
+          <span className="font-bold">04</span> Contact
         </Link>
       </nav>
     </header>
