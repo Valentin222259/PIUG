@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import logo from "../assets/shared/logo.svg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useTheme } from "../ThemeContext";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const { theme, toggleTheme } = useTheme(); // ✔️ Corect!
 
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<string[]>([]);
@@ -26,16 +28,13 @@ const Navbar: React.FC = () => {
   const handleSearch = (value: string) => {
     setQuery(value);
 
-    if (value.trim() === "") {
-      setResults([]);
-      return;
-    }
+    if (value.trim() === "") return setResults([]);
 
-    const filtered = searchable.filter((item) =>
-      item.toLowerCase().includes(value.toLowerCase())
+    setResults(
+      searchable.filter((item) =>
+        item.toLowerCase().includes(value.toLowerCase())
+      )
     );
-
-    setResults(filtered);
   };
 
   const goToItem = (item: string) => {
@@ -79,7 +78,7 @@ const Navbar: React.FC = () => {
       </div>
 
       <nav className="w-[90%] h-[10.6vh] bg-white/5 backdrop-blur-[80px] flex items-center justify-start gap-[64px] mr-auto pl-[3vw] left-[4vw] relative">
-        {/* SEARCH BAR */}
+        {/* SEARCH */}
         <div className="relative">
           <input
             type="text"
@@ -89,7 +88,6 @@ const Navbar: React.FC = () => {
             className="bg-white/10 rounded-full px-4 py-2 backdrop-blur-md outline-none text-white placeholder-white/60 w-[18vw]"
           />
 
-          {/* Dropdown */}
           {results.length > 0 && (
             <div className="absolute top-[50px] w-full bg-white/10 backdrop-blur-xl rounded-xl p-2 flex flex-col gap-2 z-50">
               {results.map((item) => (
@@ -124,6 +122,11 @@ const Navbar: React.FC = () => {
         <Link to="/video" className={linkClass("/video")}>
           <span className="font-bold">05</span> Video
         </Link>
+
+        {/* THEME BUTTON */}
+        <button onClick={toggleTheme} className="ml-auto mr-6 text-[20px]">
+          {theme === "dark" ? "☀️" : "🌙"}
+        </button>
       </nav>
     </header>
   );
