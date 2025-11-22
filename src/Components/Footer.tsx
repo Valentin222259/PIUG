@@ -41,6 +41,14 @@ const Footer = () => {
           © 2025 Exploration Space. All Rights Reserved.
         </p>
       </div>
+      <div className="">
+        <a
+          href="/components"
+          className="text-white/60 text-sm underline hover:text-white transition"
+        >
+          Tabel componente
+        </a>
+      </div>
     </footer>
   );
 };

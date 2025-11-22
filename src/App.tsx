@@ -9,6 +9,7 @@ import Video from "./Pages/Video";
 import Footer from "./Components/Footer";
 import HelpButton from "./Components/HelpButton";
 import ScrollButton from "./Components/ScrollButton";
+import Components from "./Pages/Components";
 
 const App: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const App: React.FC = () => {
         <Route path="/technology" element={<Technology />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/video" element={<Video />} />
+        <Route path="/components" element={<Components />} />
       </Routes>
       <Footer />
       <HelpButton />
