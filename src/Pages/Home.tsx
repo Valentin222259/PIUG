@@ -39,7 +39,7 @@ const Home: React.FC = () => {
       <div
         className="
         /* MOBIL: Flex Column centrat, spatiere egala (gap-10), margine sus */
-        flex flex-col items-center px-6 mt-32 gap-10
+        flex flex-col items-center px-6 mt-32 gap-15
         
         /* DESKTOP: Layout-ul tau original (fara flex-col, folosim clasele tale) */
         md:flex-row md:justify-between md:items-end md:mt-[251px] md:px-[165px] md:gap-0
@@ -99,7 +99,7 @@ const Home: React.FC = () => {
         <div
           className="
           /* MOBIL: Doar un wrapper simplu, fara pozitionare absoluta */
-          pb-12 mt-20
+          pb-12
           
           /* DESKTOP: Absolut, exact cum aveai tu */
           md:absolute md:top-[52vh] md:left-[69.5vw] md:pb-0
