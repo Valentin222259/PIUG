@@ -14,23 +14,22 @@ const Navbar: React.FC = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<string[]>([]);
 
+  // Lista de pagini disponibile pentru căutare
   const searchable = [
-    "Moon",
-    "Mars",
-    "Europa",
-    "Titan",
-    "Douglas Hurley",
-    "Mark Shuttleworth",
-    "Victor Glover",
-    "Anousheh Ansari",
-    "Launch Vehicle",
-    "Spaceport",
-    "Space Capsule",
+    "Home",
+    "Destination",
+    "Crew",
+    "Technology",
+    "Contact",
+    "Video",
+    "Components", // Am adăugat și pagina de componente, opțional
   ];
 
   const handleSearch = (value: string) => {
     setQuery(value);
     if (value.trim() === "") return setResults([]);
+
+    // Filtrare simplă case-insensitive
     setResults(
       searchable.filter((item) =>
         item.toLowerCase().includes(value.toLowerCase())
@@ -41,23 +40,15 @@ const Navbar: React.FC = () => {
   const goToItem = (item: string) => {
     setQuery("");
     setResults([]);
-    setIsOpen(false);
+    setIsOpen(false); // Închide meniul mobil dacă e deschis
 
-    if (["Moon", "Mars", "Europa", "Titan"].includes(item))
-      return navigate(`/destination?item=${item.toLowerCase()}`);
-    if (
-      [
-        "Douglas Hurley",
-        "Mark Shuttleworth",
-        "Victor Glover",
-        "Anousheh Ansari",
-      ].includes(item)
-    )
-      return navigate(`/crew?member=${item.toLowerCase().replace(" ", "-")}`);
-    if (["Launch Vehicle", "Spaceport", "Space Capsule"].includes(item))
-      return navigate(
-        `/technology?tech=${item.toLowerCase().replace(" ", "-")}`
-      );
+    // Navigare simplă bazată pe numele paginii
+    if (item === "Home") {
+      navigate("/");
+    } else {
+      // Pentru restul: /destination, /crew, /technology etc.
+      navigate(`/${item.toLowerCase()}`);
+    }
   };
 
   const linkClass = (path: string) =>
@@ -69,9 +60,6 @@ const Navbar: React.FC = () => {
     }`;
 
   return (
-    // HEADER
-    // Mobil: fixed top-0 left-0 w-full p-6 (Stil nou pentru mobil)
-    // Desktop (md): relative top-[4vh] left-[3vw] (Stilul tău original)
     <header
       className="
       fixed top-0 left-0 w-full p-6 z-50 flex items-center justify-between
@@ -97,12 +85,12 @@ const Navbar: React.FC = () => {
       {/* NAVIGATIE */}
       <nav
         className={`
-          /* STILURI MOBIL (Sidebar) */
+          /* STILURI DESKTOP (Sidebar) */
           fixed inset-y-0 right-0 ml-14.5 w-[70%] max-w-[300px] h-screen bg-[#0B0D17]/95 backdrop-blur-xl
           flex flex-col pt-32 pl-8 gap-8 z-40 transform transition-transform duration-300 ease-in-out
           ${isOpen ? "translate-x-0" : "translate-x-full"}
 
-          /* STILURI DESKTOP (Originale) */
+          /* STILURI MOBIL (Originale) */
           md:translate-x-0 md:static md:flex-row md:h-[10.6vh] md:w-[90%] md:max-w-none 
           md:bg-white/5 md:backdrop-blur-[80px] md:pt-0 md:pl-[3vw] md:gap-[64px] 
           md:items-center md:justify-start md:mr-auto md:left-[4vw] md:relative
@@ -114,7 +102,7 @@ const Navbar: React.FC = () => {
             type="text"
             value={query}
             onChange={(e) => handleSearch(e.target.value)}
-            placeholder="Search..."
+            placeholder="Search Page..."
             className="bg-white/10 rounded-full px-4 py-2 backdrop-blur-md outline-none text-white placeholder-white/60 w-full md:w-[18vw]"
           />
           {results.length > 0 && (
@@ -123,7 +111,7 @@ const Navbar: React.FC = () => {
                 <button
                   key={item}
                   onClick={() => goToItem(item)}
-                  className="px-3 py-2 text-white text-left bg-white/10 hover:bg-white/20 rounded-md block w-full"
+                  className="px-3 py-2 text-white text-left bg-white/10 hover:bg-white/20 rounded-md block w-full uppercase font-barlowCondensed tracking-widest"
                 >
                   {item}
                 </button>
