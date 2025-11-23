@@ -4,11 +4,11 @@ const Footer = () => {
   return (
     <footer
       className="
-      w-full py-8 
+      w-full py-8 h-[30vh]
       bg-white/5 backdrop-blur-xl 
       text-white 
       border-t border-white/10
-      mt-20
+      mt-0
     "
     >
       <div className="max-w-[1200px] mx-auto flex flex-col items-center gap-6 px-4">
