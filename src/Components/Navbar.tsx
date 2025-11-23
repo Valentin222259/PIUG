@@ -98,7 +98,7 @@ const Navbar: React.FC = () => {
       <nav
         className={`
           /* STILURI MOBIL (Sidebar) */
-          fixed inset-y-0 right-0 w-[70%] max-w-[300px] h-screen bg-[#0B0D17]/95 backdrop-blur-xl
+          fixed inset-y-0 right-0 ml-14.5 w-[70%] max-w-[300px] h-screen bg-[#0B0D17]/95 backdrop-blur-xl
           flex flex-col pt-32 pl-8 gap-8 z-40 transform transition-transform duration-300 ease-in-out
           ${isOpen ? "translate-x-0" : "translate-x-full"}
 
