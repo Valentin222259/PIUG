@@ -99,10 +99,10 @@ const Home: React.FC = () => {
         <div
           className="
           /* MOBIL: Doar un wrapper simplu, fara pozitionare absoluta */
-          pb-12
+          pb-12 mt-20
           
           /* DESKTOP: Absolut, exact cum aveai tu */
-          md:absolute md:top-[55vh] md:left-[69.5vw] md:pb-0
+          md:absolute md:top-[52vh] md:left-[69.5vw] md:pb-0
         "
         >
           <button
