@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
     ${
       location.pathname === path
         ? "border-r-[4px] md:border-r-0 md:border-b-[3px] border-white text-white"
-        : "opacity-80 hover:opacity-100 text-white border-r-[4px] md:border-r-0 border-transparent md:border-b-[3px] hover:border-gray-400"
+        : "opacity-100 hover:opacity-100 text-white border-r-[4px] md:border-r-0 border-transparent md:border-b-[3px] hover:border-gray-400" // AICI S-A FĂCUT MODIFICAREA: opacity-80 -> opacity-100
     }`;
 
   return (
