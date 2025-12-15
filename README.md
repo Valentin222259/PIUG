@@ -1,73 +1,62 @@
-# React + TypeScript + Vite
+# 🚀 Exploration Space – Interactive Space Tourism Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-19.0-61DAFB?logo=react&style=for-the-badge)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?logo=typescript&style=for-the-badge)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?logo=tailwind-css&style=for-the-badge)
+![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?logo=vite&style=for-the-badge)
 
-Currently, two official plugins are available:
+## 📖 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Exploration Space** is a modern, fully responsive web application designed to simulate a space tourism booking experience. The project focuses on high-quality UI implementation based on complex Figma designs and adheres to solid UX principles like Nielsen’s Heuristics and Gestalt theory.
 
-## React Compiler
+👉 **Live Demo:** [https://piug-alpha.vercel.app/](https://piug-alpha.vercel.app/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Key Features
 
-## Expanding the ESLint configuration
+- **📱 Fully Responsive:** Optimized for Mobile, Tablet, and Desktop using **Tailwind CSS**.
+- **🌗 Dark/Light Mode:** Seamless theme switching with persistent state.
+- **🔍 Smart Search:** Real-time filtering to quickly find destinations, crew members, or technologies.
+- **⚡ Modern Tech Stack:** Built with **React 19**, **TypeScript**, and **Vite** for lightning-fast performance.
+- **🎨 Interactive UI:** Custom carousels, tabbed navigation, and smooth transitions.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Frontend:** React 19, TypeScript
+- **Styling:** Tailwind CSS 4, CSS Modules
+- **Routing:** React Router DOM
+- **Build Tool:** Vite
+- **Design:** Figma (Implementation)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 How to Run Locally
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  **Clone the repository**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+    ```bash
+    git clone [https://github.com/valentin222259/piug.git](https://github.com/valentin222259/piug.git)
+    cd piug
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2.  **Install dependencies**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server**
+
+    ```bash
+    npm run dev
+    ```
+
+4.  Open `http://localhost:5173` in your browser.
+
+## 📂 Project Structure
+
+```bash
+src/
+├── assets/         # Images and icons
+├── Components/     # Reusable UI components (Navbar, Buttons, etc.)
+├── Pages/          # Main page views (Home, Destination, Crew, Tech)
+├── App.tsx         # Main application entry point
+└── main.tsx        # React DOM rendering
 ```
