@@ -91,4 +91,3 @@ MIT
 
 ---
 
-**Made with ❤️ by Valentin**
