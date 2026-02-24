@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
     "Technology",
     "Contact",
     "Video",
-    "Components", // Am adăugat și pagina de componente, opțional
+    "Components", // Am adaugat și pagina de componente, optional
   ];
 
   const handleSearch = (value: string) => {
@@ -40,9 +40,9 @@ const Navbar: React.FC = () => {
   const goToItem = (item: string) => {
     setQuery("");
     setResults([]);
-    setIsOpen(false); // Închide meniul mobil dacă e deschis
+    setIsOpen(false); // inchide meniul mobil dacă e deschis
 
-    // Navigare simplă bazată pe numele paginii
+    // Navigare simpla bazata pe numele paginii
     if (item === "Home") {
       navigate("/");
     } else {

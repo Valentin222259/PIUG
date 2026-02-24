@@ -10,7 +10,6 @@ type ThemeContextType = {
   toggleTheme: () => void;
 };
 
-// Exportăm doar contextul, nu și hook-ul
 export const ThemeContext = createContext<ThemeContextType | undefined>(
   undefined,
 );
