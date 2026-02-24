@@ -3,7 +3,7 @@ import logo from "../assets/shared/logo.svg";
 import iconHamburger from "../assets/shared/icon-hamburger.svg";
 import iconClose from "../assets/shared/icon-close.svg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useTheme } from "../ThemeContext";
+import { useTheme } from "../hooks/useTheme";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -32,8 +32,8 @@ const Navbar: React.FC = () => {
     // Filtrare simplă case-insensitive
     setResults(
       searchable.filter((item) =>
-        item.toLowerCase().includes(value.toLowerCase())
-      )
+        item.toLowerCase().includes(value.toLowerCase()),
+      ),
     );
   };
 
