@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
     setQuery(value);
     if (value.trim() === "") return setResults([]);
 
-    // Filtrare simplă case-insensitive
+    // Filtrare simpla case-insensitive
     setResults(
       searchable.filter((item) =>
         item.toLowerCase().includes(value.toLowerCase()),
