@@ -3,7 +3,7 @@
 [![CI/CD Pipeline](https://github.com/valentin222259/space-tourism/actions/workflows/ci.yml/badge.svg)](https://github.com/valentin222259/space-tourism/actions)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Valentin222259_Space-Tourism&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Valentin222259_Space-Tourism)
 
-**Live Demo:** [🌍 Vezi aplicația live pe Vercel](https://space-tourism-valentin222259.vercel.app)
+**Live Demo:** [🌍 Vezi aplicația live pe Vercel](https://piug-alpha.vercel.app/)
 
 A comprehensive solution to the [Space Tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWlf1GfW). This project has been expanded with custom pages (Video, Contact) and built using a robust, type-safe architecture with React and TypeScript, complete with an automated CI/CD pipeline.
 
