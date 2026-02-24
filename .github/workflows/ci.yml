@@ -34,3 +34,10 @@ jobs:
       # 5. Verificăm dacă proiectul se compilează (Build)
       - name: Build project
         run: npm run build
+
+      # 6. Quality Gate: Scanare cu SonarCloud
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
